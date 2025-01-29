@@ -2,10 +2,10 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from api.chat import get_response
 
-vercel_app = Flask(__name__)
-CORS(vercel_app)
+app = Flask(__name__)
+CORS(app)
 
-@vercel_app.post("/predict")
+@app.post("/predict")
 def predict():
     text = request.get_json().get("message")
     response = get_response(text)
@@ -13,4 +13,4 @@ def predict():
     return jsonify(message)
 
 if __name__ == "__main__":
-    vercel_app.run(debug=True)
+    app.run(debug=True)
