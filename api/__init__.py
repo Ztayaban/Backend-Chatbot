@@ -1,1 +1,1 @@
-from .app import vercel_app
+from .app import app
