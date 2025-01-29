@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from chat import get_response
+from api.chat import get_response
 
 vercel_app = Flask(__name__)
 CORS(vercel_app)
