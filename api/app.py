@@ -3,6 +3,7 @@ from flask_cors import CORS
 from api.chat import get_response
 import nltk
 nltk.download('punkt')
+nltk.download('punkt_tab')
 
 
 app = Flask(__name__)
